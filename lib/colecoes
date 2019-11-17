@@ -1,0 +1,59 @@
+
+void sobreColecoes() {
+
+  //Forma literal de criar colecoes
+  //LIST -> []
+  List<String> aListOfStrings = ['one', 'two', 'three'];
+  //SET -> {}
+  Set<String> aSetOfStrings = {'one', 'two', 'three'};
+  //MAP -> { "key": value }
+  Map<String, int> aMapOfStringsToInts = {
+    'one': 1,
+    'two': 2,
+    'three': 3,
+  };
+
+  //Definindo Tipo especifico da Colecao
+  var aListOfInts = <int>[];
+  var aSetOfInts = <int>{};
+  var aMapOfIntToDouble = <int, double>{};
+
+
+  //LIST
+  //Permite repeticoes e lista ordenada
+  var lista = [1, 2, 3 , 4, 5];
+  //Acessando elemento
+  print(lista[1]);
+  //Adicionando elemento
+  lista.add(6);
+  //Removendo elemento
+  lista.remove(3);
+  //Adicionando outra lista com Spread Operator
+  var outraLista = [7, 8, 9, 10];
+  var lista2 = [1,2,3,4, ...outraLista];
+  //Null-Aware Spread operator
+  var listaNula;
+  var lista3 = [1,2, ...?listaNula];
+  print(lista3);
+
+
+  //SET
+  //Uso semelhante a list, apenas nao permite repeticoes e colecao NAO ORDENADA
+  //print(listaSet[3]); //Error: The method '[]' isn't defined for the class 'Set<int>'
+  Set<int> listaSet = { 1,2,3,4,5 };
+  listaSet.add(2);
+  print(listaSet); //1,2,3,4,5
+
+
+  //MAP
+  Map<String, int> mapa = {
+    "Um" : 1,
+    "Dois" : 2,
+    "Tres" : 3
+  };
+
+  print(mapa["Um"]);
+  mapa["Quatro"] = 4;
+  print(mapa); //{Um: 1, Dois: 2, Tres: 3, Quatro: 4}
+
+}

@@ -1,0 +1,71 @@
+
+void sobreVariaveis() {
+    /*
+      * Algumas notas
+      *
+      * -> Todas as variaveis não inicializadas tem valor DEFAULT 'null'
+      * -> Todas os tipos de variaveis são tratados como Objetos
+      *
+      * */
+
+    //Em String pode ser usado "" ou ''
+    //Codigo deve ser finalizado com ;
+    var a = "A";
+    var b = 'B';
+
+    //Tipo inferido
+    var myString = "String type";
+    var myNumber = 10;
+    var myDouble = 1.0;
+    var myBoolean = true;
+
+    //Tipo declarado
+    String typeString = "String";
+    int typeInt = 20;
+    double typeDouble = 20.0;
+    bool typeBoolean = false;
+
+    //Dynamic
+    //Em variaveis dynamic, o tipo pode ser alterado
+    dynamic typeDynamic = "Dynamic";
+    print("Tipo dynamic: $typeDynamic");
+    typeDynamic = 200;
+    print("Tipo dinamico alterado: $typeDynamic");
+
+    //Final
+    final int varFinal = 200;
+    //varFinal = 300; //<-- final variable, can only be set once
+
+    //Const
+    const varConst = 10000000;
+    //varConst = 20; //<-- cant be assigned value
+
+
+    //Numbers
+    // Dois tipos: int e double
+    var varInt = 100;
+    var varDouble = 100.0;
+    varInt += 50;
+    varInt++;
+    print("var int: $varInt"); //var int: 151
+    varDouble *= 3;
+    varDouble--;
+    print("var double: $varDouble"); //var double 299.0
+
+    //String
+    //Forma de concatenacao
+    var first = "Primeiro";
+    var str = first + " Segundo";
+    print(str); //Primeiro Segundo
+
+    //String interpolation
+    //${expreession} ou $variable
+    var str2 = "Concatenacao: ${first.toUpperCase()} $str";
+    print(str2); //Concatenacao: PRIMEIRO Primeiro Segundo
+
+
+  //Boolean
+  var aprovado = true;
+  var info = aprovado ? "Aprovado" : "Reprovado";
+  print(info);
+}
