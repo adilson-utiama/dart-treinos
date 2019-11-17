@@ -14,11 +14,14 @@ void sobreFuncoes() {
   //Chamada da funcao com parametro padrao
   dividir(numero: 10); //podemos omitir o parametro 'divisao'
 
+  //Passando uma funcao como parametro
+  executar("Funcao como Parametro", imprimeAlgo);
+
 }
 
 //Funcao sem retorno
 void imprimeAlgo() {
-  print("Imprimindo...");
+  print("Imprimindo algo...");
 }
 
 //Funcao com parametros
@@ -45,3 +48,11 @@ void dividir( { int numero, int divisao = 2 } ) {
 //Funcao anonima { arrow function }
 //Para funções que contêm apenas uma expressão, você pode usar uma sintaxe abreviada
 void dobrarValor(int numero) => print(numero * 2);
+
+//Funcoes como parametro
+void executar(String msg, Function func) {
+  print(msg);
+  print("Funcao executar inicio");
+  func();
+  print("Funcao executar finalizado");
+}

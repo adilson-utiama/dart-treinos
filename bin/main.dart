@@ -12,7 +12,7 @@ main(List<String> arguments) {
   //operadores.sobreOperadores();
   //controle.sobreEstruturasControle();
   //colecoes.sobreColecoes();
-  //funcoes.sobreFuncoes();
-  excecoes.sobreExceptions();
+  funcoes.sobreFuncoes();
+  //excecoes.sobreExceptions();
 
 }
